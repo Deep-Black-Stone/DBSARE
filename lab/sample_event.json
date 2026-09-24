@@ -1,0 +1,9 @@
+{
+  "id": "lab-event-001",
+  "source": "controlled-lab-simulator",
+  "kind": "simulated_security_event",
+  "host": "lab-host-01",
+  "severity": "informational",
+  "authorized": true,
+  "description": "Synthetic event for DBSARE evidence-pipeline testing."
+}
