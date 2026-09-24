@@ -1,41 +1,33 @@
-# Implementation Matrix
+# Implementation Matrix — WSL Source of Truth
 
-> **State basis:** Latest read-only audit of `~/DBSARE_AI_PFE` on 2026-09-24. This matrix describes the **real WSL implementation state**. GitHub architecture/reference code is tracked separately and is not treated as WSL implementation evidence.
+Authoritative OpenCode audit: 2026-09-24.
 
-| Capability | Real WSL state | GitHub architecture/reference state | Next target |
-|---|---|---|---|
-| Linux runtime | Not implemented | Architecture/reference foundation | minimal Linux runtime + lifecycle |
-| CLI | Not implemented | CLI architecture/reference exists | safe CLI entry point |
-| Core | Not implemented | Core architecture/reference exists | minimal Core lifecycle/orchestration |
-| LLM | Qwen3 research loader only; no DBSARE abstraction | LLM abstraction documented | replaceable DBSARE LLM boundary |
-| Evidence identity/integrity | Not implemented | Evidence contracts/reference exist | evidence schema + store |
-| Evidence collection | Not implemented | Collector architecture documented | first read-only collector |
-| Evidence normalization | Not implemented | Normalization contract documented | deterministic normalization |
-| Brain graph | Not implemented | Brain model documented | initial environment graph |
-| Environment model | Not implemented | Environment architecture documented | host/service/environment state |
-| Memory | Not implemented | Memory model documented | explicit memory boundary + persistence |
-| Correlation | Not implemented | Correlation architecture documented | deterministic structured correlation |
-| Reasoning | Not implemented | Reasoning model documented | evidence-grounded reasoning records |
-| Investigation | Not implemented | Investigation lifecycle documented | bounded investigation state machine |
-| Policy | Not implemented | Security/policy architecture documented | deny-by-default policy boundary |
-| Actions | Not implemented | Authorized-action model documented | proposal-only action boundary |
-| Audit | Not implemented | Audit architecture documented | durable audit events |
-| GUI | Not implemented | GUI boundary documented | interface skeleton after core |
-| Voice | Not implemented | Voice contract documented | interaction boundary after core |
-| Lab | Not implemented | Lab architecture documented | synthetic controlled scenario |
-| PFE integration | Not implemented | PFE scope documented | end-to-end integration |
-| Qwen research | Implemented | Research scope documented | Exp9 + confound controls |
-| Tests | No DBSARE project tests | Testing strategy documented | tests from Phase 1 onward |
+| Capability | WSL actual state | Next target |
+|---|---|---|
+| DBSARE Core | Not implemented | lifecycle + orchestration |
+| Linux runtime | Not implemented | minimal runtime foundation |
+| CLI | Not implemented | safe CLI entry point |
+| Evidence | Not implemented | validated evidence contract |
+| Collectors | Not implemented | one read-only Linux collector |
+| Normalization | Not implemented | deterministic boundary |
+| Environment Model | Not implemented | host/service/network model |
+| Brain | Not implemented | entity/relationship graph |
+| Memory | Not implemented | explicit persistence boundary |
+| Correlation | Not implemented | deterministic evidence correlation |
+| Reasoning | Not implemented | evidence-grounded reasoning |
+| Investigation | Not implemented | state machine + safe planner |
+| Policy | Not implemented | deny-by-default policy boundary |
+| Actions | Not implemented | authorized action boundary |
+| Audit | Not implemented | auditable event records |
+| LLM abstraction | Not implemented | replaceable DBSARE LLM contract |
+| GUI | Not implemented | interaction boundary |
+| Voice | Not implemented | interaction boundary |
+| Lab | Not implemented | controlled reproducible lab |
+| DBSARE tests | Not implemented | unit + integration + security tests |
+| Qwen3 research | Implemented, research-only | stronger causal controls / Experiment 9 |
 
-## Status semantics
+## Important distinction
 
-- **Implemented** = verified in the real WSL source.
-- **Reference foundation** = architecture/documentation or bounded GitHub reference material; not proof of WSL implementation.
-- **Planned** = accepted future work.
-- **Research** = experimental investigation.
+GitHub currently contains an earlier foundation implementation. That is a separate repository state and must not be represented as proof that WSL has reached those capabilities.
 
-## Critical rule
-
-Do not promote a GitHub reference foundation to **Implemented** until the corresponding WSL implementation exists and has been audited/validated.
-
-The Qwen3 research track must remain separate from DBSARE system implementation.
+WSL takes precedence for implementation claims.
