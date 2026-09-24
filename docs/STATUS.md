@@ -1,26 +1,47 @@
 # Repository Status
 
-**Current milestone:** Phase 5 foundation strengthened.
+**Current milestone:** Integrated defensive reasoning foundation (Phases 3–7 foundations).
 
 ## Verified repository capabilities
 - Python packaging metadata and CLI foundation
 - deterministic in-memory Brain entity/relationship model
 - duplicate-safe graph relationships and neighborhood traversal
-- evidence ingestion with UUID identity, UTC observation time, canonical JSON, and SHA-256 provenance fingerprint
+- evidence ingestion with UUID identity, UTC observation time, canonical JSON, and SHA-256 integrity fingerprint
 - evidence lookup, kind filtering, and structured export
-- investigation state machine and safe planner foundation
+- deterministic evidence normalization into selected Brain entity types
+- deterministic correlation of explicit structured relationships
+- evidence-grounded reasoning records with bounded confidence
+- investigation state machine and safe investigation planner
 - safe default policy boundary
-- evidence-grounded reasoning record abstraction
 - explicit memory categories
 - SQLite persistence boundary for memory and evidence
 - runtime health reporting
-- foundation tests covering graph, evidence, investigation, policy, and persistence round trips
+- foundation and integration tests
+
+## Current end-to-end defensive path
+
+```
+Structured Evidence
+      ↓
+Evidence Identity + Integrity
+      ↓
+Normalization
+      ↓
+Brain / Environment Model
+      ↓
+Deterministic Correlation
+      ↓
+Reasoning Record
+      ↓
+Investigation Plan
+      ↓
+Audit / Report Boundary
+```
 
 ## Not claimed as implemented
 - real LLM inference or Qwen3 runtime
 - Nmap/Nessus/Wireshark/tshark/Suricata collectors
-- persistent graph database
-- automatic evidence-to-Brain normalization/correlation pipeline
+- production graph database
 - autonomous privileged or modifying actions
 - production GUI
 - STT/TTS voice pipeline
@@ -28,11 +49,4 @@
 - full PFE end-to-end evaluation
 - continual model training or automatic weight updates
 
-## Engineering rule
-Repository status is reported conservatively. A foundation interface is not treated as a production subsystem.
-
-## Next implementation focus
-1. Formalize evidence normalization into typed environment entities.
-2. Connect persisted evidence/memory to the core through explicit configuration.
-3. Expand deterministic correlation and investigation records.
-4. Add end-to-end tests before introducing real security-tool adapters.
+Repository status remains conservative: a foundation interface is not treated as a production subsystem.

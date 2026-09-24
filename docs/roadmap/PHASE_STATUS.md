@@ -5,11 +5,11 @@
 | 0 | Architecture/documentation foundation completed |
 | 1 | Python/Linux foundation implemented |
 | 2 | Model contract + OpenAI-compatible adapter implemented; backend configuration remains deployment-specific |
-| 3 | Evidence object + JSON collector foundation implemented; evidence identity, export, lookup, and integrity strengthened |
-| 4 | Environment model + Brain foundation implemented; deterministic graph traversal strengthened |
-| 5 | Memory abstraction + SQLite persistence foundation implemented and round-trip tested |
-| 6 | Reasoning record + deterministic correlation foundation implemented |
-| 7 | Investigation state machine + safe planner foundation implemented |
+| 3 | Evidence object + JSON collector foundation implemented; identity, integrity, lookup, export, and normalization strengthened |
+| 4 | Environment model + Brain foundation implemented; deterministic traversal and entity relationships strengthened |
+| 5 | Memory abstraction + SQLite persistence foundation implemented and tested |
+| 6 | Reasoning record + deterministic correlation foundation integrated into the core |
+| 7 | Investigation state machine + safe planner integrated into the core |
 | 8 | Policy boundary + audit model foundation implemented; modifying actions denied by default |
 | 9 | GUI boundary + static dashboard placeholder implemented; production UI not implemented |
 | 10 | Voice contract implemented; STT/TTS adapters not implemented |
