@@ -1,46 +1,101 @@
 # DBSARE Phase Execution Plan
 
+> **Important state correction — 2026-09-24:** The latest read-only audit of `~/DBSARE_AI_PFE` found no DBSARE implementation in WSL. The phase statuses below therefore describe the **architecture/documentation state in GitHub**, not a verified WSL implementation.
+
 ## Phase 0 — Architecture & Documentation
-**Status: Completed.** Architecture, contracts, trust boundaries, failure model, security model, research scope, lab model, documentation index, bilingual README, and architecture visuals are present.
+
+**Status: Completed — GitHub documentation foundation.**
+
+Architecture, contracts, trust boundaries, failure model, security model, research scope, lab model, documentation index, bilingual README, and architecture visuals are present in GitHub.
 
 ## Phase 1 — Linux Foundation
-**Status: Foundation implemented.** Python packaging, CLI entry point, runtime health reporting, configuration boundary, storage boundary, and foundation/integration test coverage are present. Production-grade installer lifecycle, distro detection, service management, and resource-aware runtime management remain future work.
+
+**Status: Planned for WSL implementation.**
+
+GitHub contains reference/foundation material, but the WSL audit found no real DBSARE Linux runtime, CLI, installer lifecycle, or DBSARE execution path.
 
 ## Phase 2 — LLM Abstraction
-**Status: Interface foundation implemented.** DBSARE has a replaceable LLM contract and OpenAI-compatible backend boundary. Real Qwen3/runtime deployment is intentionally not claimed yet; backend configuration and production model evaluation remain future work.
+
+**Status: Architecture defined; WSL implementation not present.**
+
+The architecture defines a replaceable LLM boundary. WSL contains Qwen3 research loaders, but no DBSARE LLM abstraction and no Qwen3-to-DBSARE integration.
 
 ## Phase 3 — Cyber Evidence Layer
-**Status: Integrated foundation implemented.** Evidence identity, UTC timestamps, canonical payload hashing, SHA-256 integrity fingerprints, ingestion, lookup/filtering/export, JSON collection, deterministic normalization, and provenance boundaries are present. Real Nmap/Nessus/Wireshark/tshark/Suricata collectors and production retention/storage remain future work.
+
+**Status: Planned for WSL implementation.**
+
+The architecture and contracts are documented. The WSL audit found no actual collectors, evidence pipeline, normalization pipeline, or evidence store.
 
 ## Phase 4 — Environment Model
-**Status: Integrated foundation implemented.** The Environment Model and Brain provide in-memory entities, relationships, deterministic normalization, relationship creation, and graph traversal. Persistent graph storage, temporal state, identity resolution, and synchronization remain future work.
+
+**Status: Planned for WSL implementation.**
+
+The Brain/environment architecture is documented. No WSL environment model or Brain implementation exists.
 
 ## Phase 5 — Brain & Persistent Memory
-**Status: Foundation implemented.** Explicit memory categories and a SQLite persistence boundary for memory/evidence are present. Advanced retrieval, consolidation, knowledge validation, temporal memory, and retention policy remain future work.
+
+**Status: Planned for WSL implementation.**
+
+The conceptual model and persistence requirements are documented. No WSL Brain or persistent Memory implementation exists.
 
 ## Phase 6 — Reasoning & Correlation
-**Status: Integrated foundation implemented.** Deterministic structured correlation and evidence-grounded reasoning records with bounded confidence are connected to the Core. LLM-assisted reasoning, richer correlation rules, uncertainty propagation, and evaluation remain future work.
+
+**Status: Planned for WSL implementation.**
+
+Reasoning and correlation architecture is documented. The WSL Qwen research contains statistical analysis, but that is not DBSARE reasoning or cyber correlation.
 
 ## Phase 7 — Investigation Engine
-**Status: Integrated foundation implemented.** Investigation state management and a safe investigation planner are connected to the Core. Full evidence-request orchestration, timeline construction, hypothesis lifecycle, stopping criteria, replay, and real-world investigation adapters remain future work.
+
+**Status: Planned for WSL implementation.**
+
+Investigation lifecycle/state architecture is documented. No WSL investigation engine exists.
 
 ## Phase 8 — Permission & Action System
-**Status: Safety foundation implemented.** Policy and audit boundaries exist, with modifying actions denied by default. Policy language, command/tool allowlists, approval workflows, isolated execution, verification, and durable audit storage remain future work.
+
+**Status: Architecture defined; WSL implementation not present.**
+
+Security boundaries and deny-by-default principles are documented. No WSL policy/action system exists.
 
 ## Phase 9 — GUI
-**Status: Boundary/foundation only.** GUI integration boundary and static dashboard placeholder exist. Production GUI, interactive Brain graph, investigations, evidence views, permissions UI, and live system telemetry remain future work.
+
+**Status: Architecture defined; WSL implementation not present.**
+
+No WSL DBSARE GUI exists.
 
 ## Phase 10 — Voice
-**Status: Contract/foundation only.** Voice interaction boundary is defined. STT/TTS integration, streaming voice interaction, intent extraction, and production audio handling remain future work.
+
+**Status: Architecture defined; WSL implementation not present.**
+
+No WSL DBSARE voice pipeline exists.
 
 ## Phase 11 — Controlled Cyber Lab
-**Status: Synthetic foundation implemented.** A synthetic event and harmless demo scenario are present. Full isolated attacker/victim/defender deployment, telemetry generation, reproducibility, and evaluation instrumentation remain future work.
+
+**Status: Architecture defined; WSL implementation not present.**
+
+The WSL audit found no DBSARE lab topology, telemetry pipeline, or executable controlled scenario.
 
 ## Phase 12 — Integrated PFE Demonstration
-**Status: Demonstration foundation implemented.** The repository contains the defensive evidence → environment → correlation → reasoning → investigation boundary and a demo runner foundation. Full PFE end-to-end evaluation against realistic controlled scenarios remains future work.
+
+**Status: Not yet implemented.**
+
+A complete PFE demonstration requires the actual WSL DBSARE pipeline and controlled evaluation before it can be claimed.
 
 ## Phase 13 — Future Research
-**Status: Research track.** Graph reasoning, continual knowledge acquisition, autonomous investigation, multi-agent systems, trustworthy AI, mechanistic interpretability, and AI + cybersecurity research remain future directions.
+
+**Status: Research track.**
+
+Graph reasoning, continual knowledge acquisition, autonomous investigation, multi-agent systems, trustworthy AI, mechanistic interpretability, and AI + cybersecurity research remain future directions.
+
+### Separate research track: DBSARE_AI_PFE / Qwen3
+
+The current WSL implementation under `qwen3_analysis/` is a mechanistic-interpretability research sandbox around Qwen3-0.6B.
+
+It is **not** the DBSARE Core.
+
+Experiment 8 results must remain described as causal-in-context neuron effects with known limitations, not as proof of semantic cybersecurity neurons.
 
 ## Engineering rule
-A feature is marked **Implemented** only after repository verification. A foundation interface is not represented as production-complete, and planned real-world integrations are never implied by architecture diagrams.
+
+A feature is marked **Implemented** only after it is verified in the actual WSL implementation source of truth and, where applicable, validated through tests.
+
+GitHub architecture/code foundations must not be confused with verified WSL system implementation.
