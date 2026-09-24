@@ -1,46 +1,46 @@
 # DBSARE Phase Execution Plan
 
 ## Phase 0 — Architecture & Documentation
-**Status: Foundation completed.** Architecture, contracts, trust boundaries, failure model, security model, research scope, lab model, and documentation index are present.
+**Status: Completed.** Architecture, contracts, trust boundaries, failure model, security model, research scope, lab model, documentation index, bilingual README, and architecture visuals are present.
 
 ## Phase 1 — Linux Foundation
-**Status: Initial implementation started.** Python package, CLI entry point, runtime health primitive, packaging, and foundation tests are present. Remaining work: installer, distro detection, service lifecycle, configuration, resource detection, and integration tests.
+**Status: Foundation implemented.** Python packaging, CLI entry point, runtime health reporting, configuration boundary, storage boundary, and foundation/integration test coverage are present. Production-grade installer lifecycle, distro detection, service management, and resource-aware runtime management remain future work.
 
 ## Phase 2 — LLM Abstraction
-**Status: Architecture + interface foundation.** The LLM remains replaceable. Backend adapters, capability discovery, timeout/error policy, and evaluation harness remain implementation work.
+**Status: Interface foundation implemented.** DBSARE has a replaceable LLM contract and OpenAI-compatible backend boundary. Real Qwen3/runtime deployment is intentionally not claimed yet; backend configuration and production model evaluation remain future work.
 
 ## Phase 3 — Cyber Evidence Layer
-**Status: Initial implementation started.** Evidence object, provenance fingerprint, and ingestion boundary exist. Remaining work: real collectors, parsers, schema validation, retention, and storage.
+**Status: Integrated foundation implemented.** Evidence identity, UTC timestamps, canonical payload hashing, SHA-256 integrity fingerprints, ingestion, lookup/filtering/export, JSON collection, deterministic normalization, and provenance boundaries are present. Real Nmap/Nessus/Wireshark/tshark/Suricata collectors and production retention/storage remain future work.
 
 ## Phase 4 — Environment Model
-**Status: Design complete; implementation foundation started.** Brain entities/relationships provide the initial model. Remaining work: persistent graph, identity resolution, temporal state, and synchronization.
+**Status: Integrated foundation implemented.** The Environment Model and Brain provide in-memory entities, relationships, deterministic normalization, relationship creation, and graph traversal. Persistent graph storage, temporal state, identity resolution, and synchronization remain future work.
 
 ## Phase 5 — Brain & Persistent Memory
-**Status: Initial abstractions started.** Memory abstraction exists. Remaining work: persistent stores, retrieval, consolidation, knowledge validation, and retention policy.
+**Status: Foundation implemented.** Explicit memory categories and a SQLite persistence boundary for memory/evidence are present. Advanced retrieval, consolidation, knowledge validation, temporal memory, and retention policy remain future work.
 
 ## Phase 6 — Reasoning & Correlation
-**Status: Initial implementation started.** Reasoning records exist. Remaining work: correlation, deterministic rules, LLM-assisted analysis, uncertainty propagation, and evaluation.
+**Status: Integrated foundation implemented.** Deterministic structured correlation and evidence-grounded reasoning records with bounded confidence are connected to the Core. LLM-assisted reasoning, richer correlation rules, uncertainty propagation, and evaluation remain future work.
 
 ## Phase 7 — Investigation Engine
-**Status: Initial implementation started.** Investigation state machine exists. Remaining work: planner, evidence requests, timelines, hypothesis lifecycle, stopping criteria, and replay.
+**Status: Integrated foundation implemented.** Investigation state management and a safe investigation planner are connected to the Core. Full evidence-request orchestration, timeline construction, hypothesis lifecycle, stopping criteria, replay, and real-world investigation adapters remain future work.
 
 ## Phase 8 — Permission & Action System
-**Status: Safe foundation started.** Modifying actions are denied by default. Remaining work: policy language, allowlists, approvals, execution isolation, verification, and audit storage.
+**Status: Safety foundation implemented.** Policy and audit boundaries exist, with modifying actions denied by default. Policy language, command/tool allowlists, approval workflows, isolated execution, verification, and durable audit storage remain future work.
 
 ## Phase 9 — GUI
-**Status: Planned implementation.** GUI will consume the same Core APIs and expose dashboard, network, hosts, services, alerts, investigations, evidence, timeline, Brain graph, reports, permissions, and status.
+**Status: Boundary/foundation only.** GUI integration boundary and static dashboard placeholder exist. Production GUI, interactive Brain graph, investigations, evidence views, permissions UI, and live system telemetry remain future work.
 
 ## Phase 10 — Voice
-**Status: Planned implementation.** Voice remains an interaction layer: microphone -> STT -> intent -> Core -> response -> TTS.
+**Status: Contract/foundation only.** Voice interaction boundary is defined. STT/TTS integration, streaming voice interaction, intent extraction, and production audio handling remain future work.
 
 ## Phase 11 — Controlled Cyber Lab
-**Status: Architecture defined.** The lab will use isolated, authorized targets and reproducible scenarios.
+**Status: Synthetic foundation implemented.** A synthetic event and harmless demo scenario are present. Full isolated attacker/victim/defender deployment, telemetry generation, reproducibility, and evaluation instrumentation remain future work.
 
 ## Phase 12 — Integrated PFE Demonstration
-**Status: Planned integration.** End-to-end evidence -> Brain -> reasoning -> investigation -> recommendation -> verification -> report evaluation.
+**Status: Demonstration foundation implemented.** The repository contains the defensive evidence → environment → correlation → reasoning → investigation boundary and a demo runner foundation. Full PFE end-to-end evaluation against realistic controlled scenarios remains future work.
 
 ## Phase 13 — Future Research
-**Status: Research.** Graph reasoning, continual knowledge acquisition, autonomous investigation, multi-agent systems, trustworthy AI, and AI + cybersecurity research.
+**Status: Research track.** Graph reasoning, continual knowledge acquisition, autonomous investigation, multi-agent systems, trustworthy AI, mechanistic interpretability, and AI + cybersecurity research remain future directions.
 
 ## Engineering rule
-A feature is marked **Implemented** only after repository verification and tests. Roadmap diagrams are not implementation claims.
+A feature is marked **Implemented** only after repository verification. A foundation interface is not represented as production-complete, and planned real-world integrations are never implied by architecture diagrams.
