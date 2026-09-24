@@ -1,52 +1,80 @@
 # Repository Status
 
-**Current milestone:** Integrated defensive reasoning foundation (Phases 3–7 foundations).
+**Current milestone:** Architecture/documentation foundation synchronized with the latest WSL audit.
 
-## Verified repository capabilities
-- Python packaging metadata and CLI foundation
-- deterministic in-memory Brain entity/relationship model
-- duplicate-safe graph relationships and neighborhood traversal
-- evidence ingestion with UUID identity, UTC observation time, canonical JSON, and SHA-256 integrity fingerprint
-- evidence lookup, kind filtering, and structured export
-- deterministic evidence normalization into selected Brain entity types
-- deterministic correlation of explicit structured relationships
-- evidence-grounded reasoning records with bounded confidence
-- investigation state machine and safe investigation planner
-- safe default policy boundary
-- explicit memory categories
-- SQLite persistence boundary for memory and evidence
-- runtime health reporting
-- foundation and integration tests
+## Source-of-truth policy
 
-## Current end-to-end defensive path
+The GitHub repository is currently the **architecture, documentation, contracts, roadmap, and coordination repository** for DBSARE.
 
-```
-Structured Evidence
-      ↓
-Evidence Identity + Integrity
-      ↓
-Normalization
-      ↓
-Brain / Environment Model
-      ↓
-Deterministic Correlation
-      ↓
-Reasoning Record
-      ↓
-Investigation Plan
-      ↓
-Audit / Report Boundary
-```
+The latest read-only audit of the real WSL project at `~/DBSARE_AI_PFE` (2026-09-24) established that:
 
-## Not claimed as implemented
-- real LLM inference or Qwen3 runtime
-- Nmap/Nessus/Wireshark/tshark/Suricata collectors
-- production graph database
-- autonomous privileged or modifying actions
-- production GUI
-- STT/TTS voice pipeline
-- complete isolated lab deployment
-- full PFE end-to-end evaluation
-- continual model training or automatic weight updates
+- `~/DBSARE_AI_PFE/DBSARE/` contains only an empty Git initialization and a Python virtual environment.
+- There is **no real DBSARE Core implementation in WSL**.
+- There are no WSL implementations of Brain, Memory, Evidence, Reasoning, Investigation, Policy, Actions, CLI, GUI, Voice, or Cyber Collectors.
+- The implemented WSL code is the separate `qwen3_analysis/` mechanistic-interpretability research track.
+- Qwen3 research has no code-level dependency on DBSARE.
+- Therefore, the WSL implementation is currently a **greenfield DBSARE implementation target**, not an implementation that can be synchronized into this repository.
 
-Repository status remains conservative: a foundation interface is not treated as a production subsystem.
+## Current repository capabilities
+
+The GitHub repository contains architecture and bounded reference/foundation code developed during the documentation phase. These repository-side foundations must **not** be interpreted as proof that the corresponding DBSARE system exists in the WSL source of truth.
+
+Repository documentation covers:
+
+- system architecture
+- component boundaries
+- Brain / Memory concepts
+- evidence architecture and contracts
+- reasoning and investigation models
+- security / trust boundaries
+- Linux integration targets
+- GUI / CLI / voice contracts
+- testing and evaluation strategy
+- controlled lab architecture
+- PFE and research scope
+- roadmap and implementation matrix
+
+## WSL implementation reality
+
+**Verified 2026-09-24 from OpenCode read-only audit:**
+
+| Component | WSL state |
+|---|---|
+| DBSARE Core | Not implemented |
+| Brain | Not implemented |
+| Memory | Not implemented |
+| Evidence pipeline | Not implemented |
+| Normalization | Not implemented |
+| Correlation | Not implemented |
+| Reasoning | Not implemented |
+| Investigation | Not implemented |
+| Policy / Actions | Not implemented |
+| CLI | Not implemented |
+| GUI | Not implemented |
+| Voice | Not implemented |
+| Cyber collectors | Not implemented |
+| Controlled lab | Not implemented |
+| Project tests | Not implemented |
+| Qwen3 research | Implemented separately |
+
+## Qwen3 research state
+
+The WSL research track contains seven standalone Python scripts and six JSON result files.
+
+Experiment 8 provides causal-in-context intervention evidence for selected Qwen3-0.6B neurons, but the results **do not establish semantic “cybersecurity neurons.”** The documented lexical vulnerability/weather confound remains unresolved.
+
+Qwen3 remains an experimental model/research component, not DBSARE itself.
+
+## Synchronization rule
+
+Until the real WSL implementation exists:
+
+1. Do not copy or invent DBSARE Core code into GitHub based on the architecture alone.
+2. Do not claim WSL implementation for components that the WSL audit marked absent.
+3. Architecture decisions may continue to evolve in GitHub documentation.
+4. Claude remains the architecture/prompt coordination layer.
+5. OpenCode remains responsible for actual WSL implementation.
+6. WSL remains the implementation source of truth.
+7. After an implementation milestone, the real WSL state must be audited before synchronized implementation is represented as verified in GitHub.
+
+This is intentionally conservative: **design is not implementation, and Qwen research is not DBSARE.**
