@@ -1,31 +1,41 @@
 # Implementation Matrix
 
-| Capability | Current repository state | Next target |
-|---|---|---|
-| Linux runtime | Foundation implemented | installer lifecycle + resource-aware runtime |
-| CLI | Foundation implemented (status, brain, evidence, investigate, health) | operational workflows and richer output |
-| Evidence identity/integrity | Implemented | stronger schema validation + durable store |
-| Evidence collection | JSON collector foundation | real authorized cybersecurity collectors |
-| Evidence normalization | Deterministic normalization implemented | broader schemas + parser coverage |
-| Brain graph | In-memory implemented | persistent graph + temporal model |
-| Environment model | Foundation implemented | identity resolution + synchronization |
-| Memory | Explicit categories + SQLite persistence boundary | retrieval/consolidation/validation |
-| Correlation | Deterministic structured correlation implemented | richer correlation rules + temporal correlation |
-| Reasoning | Evidence-grounded record + bounded confidence | LLM-assisted reasoning + uncertainty propagation |
-| Investigation | State machine + safe planner implemented | evidence requests + timelines + replay |
-| Policy | Safe boundary implemented; modifying actions denied by default | approvals + allowlists + execution isolation |
-| Audit | Foundation implemented | durable audit/event storage |
-| LLM | Replaceable contract + OpenAI-compatible adapter | real model runtime integration and evaluation |
-| GUI | Static/boundary foundation | production interactive interface |
-| Voice | Contract/boundary foundation | STT/TTS pipeline |
-| Lab | Synthetic controlled scenario | reproducible isolated cyber lab |
-| PFE integration | Defensive pipeline foundation | full end-to-end evaluation |
+> **State basis:** Latest read-only audit of `~/DBSARE_AI_PFE` on 2026-09-24. This matrix describes the **real WSL implementation state**. GitHub architecture/reference code is tracked separately and is not treated as WSL implementation evidence.
+
+| Capability | Real WSL state | GitHub architecture/reference state | Next target |
+|---|---|---|---|
+| Linux runtime | Not implemented | Architecture/reference foundation | minimal Linux runtime + lifecycle |
+| CLI | Not implemented | CLI architecture/reference exists | safe CLI entry point |
+| Core | Not implemented | Core architecture/reference exists | minimal Core lifecycle/orchestration |
+| LLM | Qwen3 research loader only; no DBSARE abstraction | LLM abstraction documented | replaceable DBSARE LLM boundary |
+| Evidence identity/integrity | Not implemented | Evidence contracts/reference exist | evidence schema + store |
+| Evidence collection | Not implemented | Collector architecture documented | first read-only collector |
+| Evidence normalization | Not implemented | Normalization contract documented | deterministic normalization |
+| Brain graph | Not implemented | Brain model documented | initial environment graph |
+| Environment model | Not implemented | Environment architecture documented | host/service/environment state |
+| Memory | Not implemented | Memory model documented | explicit memory boundary + persistence |
+| Correlation | Not implemented | Correlation architecture documented | deterministic structured correlation |
+| Reasoning | Not implemented | Reasoning model documented | evidence-grounded reasoning records |
+| Investigation | Not implemented | Investigation lifecycle documented | bounded investigation state machine |
+| Policy | Not implemented | Security/policy architecture documented | deny-by-default policy boundary |
+| Actions | Not implemented | Authorized-action model documented | proposal-only action boundary |
+| Audit | Not implemented | Audit architecture documented | durable audit events |
+| GUI | Not implemented | GUI boundary documented | interface skeleton after core |
+| Voice | Not implemented | Voice contract documented | interaction boundary after core |
+| Lab | Not implemented | Lab architecture documented | synthetic controlled scenario |
+| PFE integration | Not implemented | PFE scope documented | end-to-end integration |
+| Qwen research | Implemented | Research scope documented | Exp9 + confound controls |
+| Tests | No DBSARE project tests | Testing strategy documented | tests from Phase 1 onward |
 
 ## Status semantics
 
-- **Foundation implemented** = repository code exists and is intentionally bounded.
-- **Implemented** = capability is present at the documented scope.
-- **Planned** = not yet implemented.
-- **Research** = future experimental direction.
+- **Implemented** = verified in the real WSL source.
+- **Reference foundation** = architecture/documentation or bounded GitHub reference material; not proof of WSL implementation.
+- **Planned** = accepted future work.
+- **Research** = experimental investigation.
 
-The matrix deliberately does not claim Qwen3 inference, real security-tool collectors, autonomous privileged actions, production GUI/voice, or complete PFE evaluation.
+## Critical rule
+
+Do not promote a GitHub reference foundation to **Implemented** until the corresponding WSL implementation exists and has been audited/validated.
+
+The Qwen3 research track must remain separate from DBSARE system implementation.
