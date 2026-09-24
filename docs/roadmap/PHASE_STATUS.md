@@ -5,9 +5,9 @@
 | 0 | Architecture/documentation foundation completed |
 | 1 | Python/Linux foundation implemented |
 | 2 | Model contract + OpenAI-compatible adapter implemented; backend configuration remains deployment-specific |
-| 3 | Evidence object + JSON collector foundation implemented |
-| 4 | Environment model + Brain foundation implemented |
-| 5 | Memory abstraction + SQLite persistence foundation implemented |
+| 3 | Evidence object + JSON collector foundation implemented; evidence identity, export, lookup, and integrity strengthened |
+| 4 | Environment model + Brain foundation implemented; deterministic graph traversal strengthened |
+| 5 | Memory abstraction + SQLite persistence foundation implemented and round-trip tested |
 | 6 | Reasoning record + deterministic correlation foundation implemented |
 | 7 | Investigation state machine + safe planner foundation implemented |
 | 8 | Policy boundary + audit model foundation implemented; modifying actions denied by default |
@@ -17,4 +17,4 @@
 | 12 | Demo runner foundation implemented; full PFE evaluation not completed |
 | 13 | Research-only roadmap |
 
-This file reports repository facts conservatively.
+This file reports repository facts conservatively. Foundation interfaces are not represented as production-complete subsystems.
